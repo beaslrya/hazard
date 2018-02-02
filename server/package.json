@@ -1,0 +1,54 @@
+{
+  "name": "hazard-server",
+  "version": "0.0.1",
+  "description": "A MQTT backend server for the mobile hazard reporting application.",
+  "main": "server.js",
+  "repository": "http://github.com/oats-group/hazard",
+  "author": "Andrew Balmos <andrew@balmos.org>",
+  "license": "MIT",
+  "scripts": {
+    "lint": "eslint",
+    "lint:fix": "eslint --fix",
+    "prettier": "prettier --write",
+    "precommit": "lint-staged"
+  },
+  "lint-staged": {
+    "gitDir": "../",
+    "linters": {
+      "*.js": ["lint:fix", "git add"],
+      "*.css": ["prettier", "git add"],
+      "*.json": ["prettier", "git add"]
+    }
+  },
+  "eslintConfig": {
+    "extends": ["standard", "prettier"],
+    "plugins": ["prettier"],
+    "rules": {
+      "prettier/prettier": [
+        "error",
+        {
+          "singleQuote": true
+        }
+      ],
+      "semi": ["error", "always"]
+    }
+  },
+  "dependencies": {
+    "aedes": "^0.29.0",
+    "aedes-stats": "^1.0.0",
+    "websocket-stream": "^5.0.0"
+  },
+  "devDependencies": {
+    "eslint": "^4.3.0",
+    "eslint-config-prettier": "^2.3.0",
+    "eslint-config-standard": "^10.2.1",
+    "eslint-plugin-import": "^2.7.0",
+    "eslint-plugin-node": "^5.1.1",
+    "eslint-plugin-prettier": "^2.1.2",
+    "eslint-plugin-promise": "^3.5.0",
+    "eslint-plugin-standard": "^3.0.1",
+    "husky": "^0.14.3",
+    "lint-staged": "^4.0.2",
+    "prettier": "^1.5.3"
+  }
+}
