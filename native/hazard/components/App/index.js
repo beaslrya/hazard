@@ -32,9 +32,9 @@ export default connect({
 						<Text style={s.lheader}>
 							Longitude: {lon.toFixed(5)}
 						</Text>
-						{/*<Text style={s.lheader}>	
+						<Text style={s.lheader}>	
 							Altitude: {altd.toFixed(5)}
-			</Text>*/}
+						</Text>
 						<Text style={s.lheader}>
 							Speed: {speed.toFixed(5)}
 						</Text>
