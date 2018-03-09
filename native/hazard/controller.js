@@ -19,7 +19,8 @@ client.connect({useSSL: false,
 
 const controller = Controller({
 	devtools: Devtools({
-		host: '10.0.2.2:8585'
+		host: '10.0.2.2:8585',
+		reconnent: true
 	}),
 	state: {
 		screen: {
